@@ -1,0 +1,25 @@
+trigger: 
+- main 
+
+jobs: 
+- job: 'Testing'
+  pool: 
+    vmImage: 'ubuntu-latest'
+  strategy:
+    matrix: 
+      Python37:
+        python.version: "3.7"
+    maxParallel: 1
+  
+  steps:
+    - task: UsePythonVersion@0
+      inputs: 
+       versionSpec: '${python.version}'
+       architecture: 'x64'
+       
+       
+    - script: pip install robotframework robotframework-seleniumlibrary && npm install chromdriver
+       displayName:"install dependencies"
+
+    - bash: robot --pythonpath "." login.robot 
+      displayName: "run Robot test cases"
