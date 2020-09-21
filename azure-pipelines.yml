@@ -17,7 +17,6 @@ jobs:
        versionSpec: '3.7'
        architecture: 'x64'
        
-       
     - script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
       displayName: "Install Dependencies"
     - powershell:  robot --pythonpath "." login.robot 
