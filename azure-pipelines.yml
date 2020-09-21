@@ -18,7 +18,7 @@ jobs:
        architecture: 'x64'
        
        
-    - script: pip install robotframework robotframework-seleniumlibrary && npm install chromdriver
+    - script: pip install robotframework robotframework-seleniumlibrary && npm install geckodriver
       displayName: "Install Dependencies"
     - bash: robot --pythonpath "." login.robot 
       displayName: "run Robot test cases"
