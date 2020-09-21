@@ -19,5 +19,5 @@ jobs:
        
     - script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
       displayName: "Install Dependencies"
-    - powershell:  robot --pythonpath "." login.robot 
+    - powershell:  robot --pythonpath "." pipeline-test.robot 
       displayName: "run Robot test cases"
