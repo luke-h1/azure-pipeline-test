@@ -12,7 +12,7 @@ Suite Teardown    Run Keywords    Close Browser
 
 *** Variables ***
 ${URL}          https://www.selfridges.com/GB/en/
-${BROWSER}      chrome 
+${BROWSER}      firefox 
 ${EMAIL}        randomemail@gmail.com
 ${PWD}          supersecretpassword1235^
 ${ERROR_STR}    Oops! You've entered an incorrect email address or password. Please try again or get a new password by    clicking on 'Forgotten your password?'. For your security, you will be unable to log on after 12 unsuccessful attempts.    
