@@ -19,7 +19,6 @@ jobs:
        
        
     - script: pip install robotframework robotframework-seleniumlibrary && npm install chromdriver
-       displayName:"install dependencies"
-
+      displayName: "Install Dependencies"
     - bash: robot --pythonpath "." login.robot 
       displayName: "run Robot test cases"
