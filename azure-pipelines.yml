@@ -18,7 +18,7 @@ jobs:
        architecture: 'x64'
        
        
-    - script: pip install robotframework robotframework-seleniumlibrary && npm install geckodriver
+    - script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
       displayName: "Install Dependencies"
     - powershell:  robot --pythonpath "." login.robot 
       displayName: "run Robot test cases"
